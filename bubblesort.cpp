@@ -17,6 +17,10 @@ int size = sizeof(arr) / sizeof(arr[0]);
 // Inatialize a bool flage with ture as a default value 
 bool flag = true;
 
+// Capture the start time of the Algorithm
+clock_t start, end;
+start = clock();
+// Bubble sort implementation
 for(int i = 0; i< size-1; i++)
 {
 	for(int j =0; j < size -1 -i; j ++)
@@ -38,6 +42,13 @@ for(int i = 0; i< size-1; i++)
 		break;
 	
 }
+
+// Capture the end time of the Algorithm
+end = clock();
+
+// Print Algorithm time
+double Algo_time = (end - start) / (double)CLOCKS_PER_SEC;
+cout<<"Time taken: "<< Algo_time<<endl;
 
 printarr(arr, size);
 }
